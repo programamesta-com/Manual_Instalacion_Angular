@@ -1,0 +1,101 @@
+# Instalacion Angular en Equipos windows 
+
+## lo necesario 
+- Node Js
+- Visual Studio Code
+- Angular 
+
+#### Node JS
+El primer componente que necesitamos instalar es Node.js 
+
+Paso1. Debemos entrar ala página oficial de Node.js (nodejs.org) y le da damos en la opción de descargar dependiendo del sistema operativo que tengamos 
+
+![nodejs](/assets/angular1.jpeg)
+
+Paso 2. Ejecutamos el .exe que nos descargó, el numero de la versión dependerá de cual descargo 
+
+![nodejs_exe](/assets/angular2.jpeg)
+
+Paso 3.  Al ejecutarlo nos saldrá dicha ventana en la cual le daremos a la opción de next
+
+![nodejs_instalacion](/assets/angular3.jpeg)
+
+Paso 3.  Al ejecutarlo nos saldrá dicha ventana en la cual le daremos a la opción de next
+![nodejs_instalacion2](/assets/angular4.jpeg)
+
+Paso 5. Seleccionamos la opción de Node.js runtime y le damos al botón de next
+
+![nodejs_instalacion3](/assets/angular5.jpeg)
+
+Paso 6. Para finalizar le damos al botón de finish y ya tendríamos instalado node.js 
+
+![nodejs_instalacion4](/assets/angular6.jpeg)
+
+Para verificar que ya tengamos instalado correctamente bien node.js abrimos una ventana de PowerShell aplicando el comando Windows + R y escribiendo PowerShell y escribimos el siguiente comando “node -v” y nos saldrá la versión que tengamos instalada 
+
+`node -v`
+
+![nodejs_version](/assets/angular7.jpeg)
+
+asi ya tendremos instalado correctamente nodejs
+
+#### Visual Studio Code
+
+Después que tengamos instalado node.js ahora necesitamos instalar Visual Studio Code descargándolo desde su página (https://code.visualstudio.com/) y le damos en la opción de descargar y escogemos la de nuestro sistema operativo 
+
+![VSC](/assets/angular8.jpeg)
+
+Paso 2. Nos descargara un .exe y lo ejecutamos  
+
+![VSC](/assets/angular9.jpeg)
+
+Paso 3. Le damos en la opción next y Ahora seleccione la opción "Acepto el acuerdo" y haga clic en siguiente. Seleccione la ubicación para instalar el código de Visual Studio y haga clic continuamente en siguiente, finalmente haga clic en el botón de instalación. El proceso de instalación comenzará después de hacer clic en el botón de instalación, tardará unos minutos en finalizar la instalación. Por último, haga clic en el botón Finalizar y el proceso de instalación de Visual Studio habrá finalizado
+
+![vsc](/assets/angular10.jpeg)
+
+Paso 4. Ahora que tenemos instalado el Visual Studio Code
+
+![vsc](/assets/angular11.jpeg)
+
+#### Angular 
+
+Ahora nuestro siguiente paso es instalar angular y para eso necesitamos ir a su web oficial (https://cli.angular.io/) 
+
+Paso 1. Para poder instalar angular en nuestro equipo necesitamos abrir una terminal de comando utilizando Windows + R y poniendo CMD y pondremos el siguiente comando 
+`npm install -g @angular/cli`
+el cual nos empezara a descargar unos ficheros  
+
+Paso 2. Después que nos salga el mensaje que se instaló con éxito debemos poner el siguiente comando en la misma terminal que estamos utilizando 
+`ng new MyFirstAngular`
+El cual nos creara nuestro primer proyecto en angular  
+Al final nos dirá que el proyecto se creó correctamente
+
+![angular](/assets/angular12.jpeg)
+
+Ahora utilizamos el siguiente comando `cd MyFirstAngular` para poder movernos a la carpeta de nuestro proyecto que acabamos de crear, Sabremos que estamos en la carpeta por que se cambiará nuestra dirección en el CMD ahora utilizamos el siguiente comando para inicializar `ng serve` y cuando finalice el proceso nos saldrá la leyenda “webpack: compiled successfully”  
+
+![angular](/assets/angular13.jpeg)
+
+Ahora ya tendremos instalados Node.js tanto como Angular ahora nuestro siguiente paso es abrir Visual Studio Code  
+
+Una vez que abramos visual studio code nos vamos a la opción de extensiones que esta marcada por cuatro cuadrados y buscamos la extensión llamada “Angular Language Service” como se muestra en la imagen 
+
+![angular](/assets/angular14.jpeg)
+
+Paso 3. Ahora para poder iniciar nuestro proyecto entramos en la opción de file/archivo y le damos open folder/abrir carpeta y buscamos la ruta en la cual creamos nuestro proyecto en mi caso es en C:\Users\eduar\MyFirstAngular y le damos en open folder y ya tendremos nuestro proyecto abierto en VSC 
+
+![angular](/assets/angular15.jpeg)
+
+Paso 4. Abrimos la carpeta llamada. vscode y abrimos el archivo j.son y verificamos que tengamos la opción de "url": "http://localhost:4200/" en caso de tener un numero diferente a 4200 solo lo cambiamos y guardamos los cambios 
+![angular](/assets/angular16.jpeg)
+
+Paso 5. Ahora abrimos una terminal dentro de VSC y utilizamos el siguiente comando `ng server` y nos estará inicializando nuestro proyecto esperamos hasta que termine y para entrar le damos ctrl+click derecho al link que nos generó con nuestro local host 4200 y nos llevar a nuestro proyecto 
+
+![angular](/assets/angular17.jpeg)
+
+
+##### Paso opcional 
+
+En caso que al momento de ejecutar el comando `ng serve` les marque un error diciendo que su equipo no puede generar scripts lo único que tienen que haces es abrir un PowerShell como administrador  y utilizar estos comandos `Get-ExecutionPolicy`  y le devolverá un `Restricted`  ahora tendrán que poder el siguiente comando `Set-ExecutionPolicy Unrestricted` y le indicaran con un S (que significa que si quieren cambiar la configuración de su equipo) ahora para verificar solo mandan de nuevo el comando `Get-ExecutionPolicy` y le devolverá un `Unrestricted`. Que significa que ya se cambió la configuración 
+
+![angular](/assets/angular18.jpeg)
